@@ -96,7 +96,7 @@ Discord のアプリケーションコマンドを使って出費管理ができ
 パッケージマネージャには `bun` を使用しています。`bun install` で必要なライブラリをインストールできます。
 
 - `bun run deploy`: Cloudflare Workers を使ってデプロイします
-- `bun run command-list`: Discord アプリケーションコマンドの一覧を表示します
+- `bun run command-list`: 登録されているDiscord アプリケーションコマンドの一覧を表示します
 - `bun run command-register`: Discord アプリケーションコマンドを登録します
 - `bun run command-unregister`: Discord アプリケーションコマンドを削除します
 - `npx prisma generate`: Prisma のクライアントコードを生成します
