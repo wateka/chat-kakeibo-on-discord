@@ -97,7 +97,7 @@ Discord のアプリケーションコマンドを使って出費管理ができ
 - `bun run deploy`: Cloudflare Workers を使ってデプロイします
 - `bun run command-list`: Discord アプリケーションコマンドの一覧を表示します
 - `bun run command-register`: Discord アプリケーションコマンドを登録します
-- `bun run command-delete`: Discord アプリケーションコマンドを削除します
+- `bun run command-unregister`: Discord アプリケーションコマンドを削除します
 - `npx prisma generate`: Prisma のクライアントコードを生成します
 - `bun run migration-create <message-kebab-case>`: マイグレーションファイルを作成します
 - `bun run migration-generate <path-to-migration-file>`: Prisma のスキーマ変更を指定したファイルに書き出します
@@ -109,7 +109,7 @@ Discord のアプリケーションコマンドを使って出費管理ができ
 - [ ] `/expense-list`、`/expense-stat` コマンドに期間指定オプションを追加
 - [ ] 予算管理機能
 
-## 参考にした記事
+## 主に参考にした記事
 
 - [Cloudflare Workers + HonoでDiscord botを作る際のポイント | Marginalia](https://blog.lacolaco.net/posts/discord-bot-cfworkers-hono/)
 - [Discord Developer Portal — Documentation — Hosting on Cloudflare Workers](https://discord.com/developers/docs/tutorials/hosting-on-cloudflare-workers)
