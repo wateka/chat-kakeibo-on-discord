@@ -8,11 +8,9 @@ import {
 import { truncate, formatDate } from "./utils/formatter";
 
 export async function handleApplicationCommand(
-  interactionData: InteractionData,
+  data: InteractionData,
   prisma: PrismaClient,
 ) {
-  const data = new InteractionData(interactionData);
-
   switch (data.name()) {
     case "expense-add":
       return await handleExpenseAdd(data, prisma);
