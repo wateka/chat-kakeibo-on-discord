@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Expense {
+  id             Int      @id @default(autoincrement())
+  item_name      String
+  price          Int
+  category_id    String
+  subcategory_id String
+  payment_date   DateTime @default(now())
+  created_at     DateTime @default(now())
+  updated_at     DateTime @updatedAt
+}
+
+// model Budget {
+//   id               Int      @id @default(autoincrement())
+//   category_id      String
+//   subcategory_id   String
+//   price            Int
+//   month            DateTime
+//   created_at       DateTime @default(now())
+//   updated_at       DateTime @updatedAt
+// }
