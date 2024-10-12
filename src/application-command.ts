@@ -1,5 +1,8 @@
 import type { PrismaClient } from "@prisma/client";
-import { createMessageResponse, InteractionData } from "./utils/interaction";
+import {
+  createMessageResponse,
+  type InteractionData,
+} from "./utils/interaction";
 import categories from "./config/categories";
 import {
   getParentCategoryBySubcategoryId,
