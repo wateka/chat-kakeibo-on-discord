@@ -1,6 +1,7 @@
 # Discord 家計簿
 
 このプロジェクトは、Discord bot を利用して出費を管理できる家計簿ツールです。
+ユーザー管理機能はなく、使いたい人が都度ホスティングして利用する形式です。
 
 [Cloudflare Workers](https://www.cloudflare.com/ja-jp/developer-platform/workers/) + [D1](https://www.cloudflare.com/ja-jp/developer-platform/d1/) を使用して動作します。
 フレームワークには [Hono](https://hono.dev/) を採用しています。
