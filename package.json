@@ -1,5 +1,5 @@
 {
-  "name": "discord-kakeibo",
+  "name": "chat-kakeibo-on-discord",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy --minify",
