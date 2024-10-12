@@ -1,28 +1,27 @@
 {
-  "name": "chateibo",
-  "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy --minify",
-    "cmd": "bun src/command-manager/cmd.ts",
-    "migration-create": "wrangler d1 migrations create chateibo-db",
-    "migration-generate": "npx prisma migrate diff --from-local-d1 --to-schema-datamodel ./prisma/schema.prisma --script --output",
-    "migration-apply:local": "wrangler d1 migrations apply chateibo-db --local",
-    "migration-apply:remote": "wrangler d1 migrations apply chateibo-db --remote"
-  },
-  "dependencies": {
-    "@prisma/adapter-d1": "^5.20.0",
-    "@prisma/client": "^5.20.0",
-    "@ymd-h/format-js": "npm:@jsr/ymd-h__format-js",
-    "discord-interactions": "^4.1.0",
-    "hono": "^4.6.3"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240925.0",
-    "@inquirer/prompts": "^6.0.1",
-    "discord-api-types": "^0.37.101",
-    "discord.js": "^14.16.3",
-    "dotenv": "^16.4.5",
-    "prisma": "^5.20.0",
-    "wrangler": "^3.79.0"
-  }
+	"name": "chateibo",
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy --minify",
+		"command-list": "bun src/command-manager/list.ts",
+		"command-register": "bun src/command-manager/register.ts",
+		"command-unregister": "bun src/command-manager/unregister.ts",
+		"migration-create": "wrangler d1 migrations create chateibo-db",
+		"migration-generate": "npx prisma migrate diff --from-local-d1 --to-schema-datamodel ./prisma/schema.prisma --script --output",
+		"migration-apply:local": "wrangler d1 migrations apply chateibo-db --local",
+		"migration-apply:remote": "wrangler d1 migrations apply chateibo-db --remote"
+	},
+	"dependencies": {
+		"@prisma/adapter-d1": "^5.20.0",
+		"@prisma/client": "^5.20.0",
+		"discord-interactions": "^4.1.0",
+		"hono": "^4.6.3"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20240925.0",
+		"discord-api-types": "^0.37.101",
+		"dotenv": "^16.4.5",
+		"prisma": "^5.20.0",
+		"wrangler": "^3.79.0"
+	}
 }
