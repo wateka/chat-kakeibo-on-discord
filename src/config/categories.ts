@@ -1,3 +1,5 @@
+import type { Category } from "../utils/category";
+
 export default [
   {
     id: "food",
@@ -40,4 +42,4 @@ export default [
     name: "その他",
     subcategories: [{ id: "others-others", name: "その他", emoji: "💲" }],
   },
-];
+] satisfies Category[];
