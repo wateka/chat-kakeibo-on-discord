@@ -75,7 +75,12 @@ async function handleExpenseDelete(
 }
 
 async function handleExpenseList(data: InteractionData, prisma: PrismaClient) {
+  const subcategory_id = data.option("category") || undefined;
+
   const expenses = await prisma.expense.findMany({
+    where: {
+      subcategory_id: subcategory_id,
+    },
     orderBy: {
       payment_date: "asc",
     },
@@ -83,7 +88,13 @@ async function handleExpenseList(data: InteractionData, prisma: PrismaClient) {
 
   let message = "";
 
-  message += "出費記録です！\n";
+  if (subcategory_id) {
+    const name = getSubcategoryById(categories, subcategory_id)?.name;
+    message += `${name} の出費記録です！\n`;
+  } else {
+    message += "出費記録です！\n";
+  }
+
   message += "```";
 
   for (const expense of expenses) {

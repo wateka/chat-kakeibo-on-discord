@@ -29,7 +29,7 @@ export class InteractionData {
   }
 
   option(optionName: string) {
-    const option = this.interactionData.options.find(
+    const option = this.interactionData.options?.find(
       (option: { name: string }) => option.name === optionName,
     );
     return option?.value;

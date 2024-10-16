@@ -44,6 +44,16 @@ export default [
   {
     name: "expense-list",
     description: "出費記録を見る",
+    options: [
+      {
+        type: ApplicationCommandOptionType.String,
+        name: "category",
+        name_localized: "分類",
+        description: "分類など",
+        required: false,
+        choices: convertCategoriesToDiscordChoices(categories),
+      },
+    ],
   },
   {
     name: "expense-delete",
